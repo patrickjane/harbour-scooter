@@ -1,0 +1,39 @@
+diff --git a/src/QZXing-components.pri b/src/QZXing-components.pri
+index 7764115..f509049 100644
+--- a/src/QZXing-components.pri
++++ b/src/QZXing-components.pri
+@@ -458,10 +458,10 @@ symbian {
+     DEFINES += NOFMAXL
+ 
+ 	# Installation
+-	headers.files = $$PWD/QZXing.h $$PWD/QZXing_global.h
+-	headers.path = $$PREFIX/include
+-	target.path = $$PREFIX/lib
+-	INSTALLS += headers target
++#	headers.files = $$PWD/QZXing.h $$PWD/QZXing_global.h
++#	headers.path = $$PREFIX/include
++#	target.path = $$PREFIX/lib
++#	INSTALLS += headers target
+ 
+ 	# pkg-config support
+ 	CONFIG += create_pc create_prl no_install_prl
+diff --git a/src/QZXingFilter.cpp b/src/QZXingFilter.cpp
+index b218037..3e5b505 100644
+--- a/src/QZXingFilter.cpp
++++ b/src/QZXingFilter.cpp
+@@ -180,11 +180,11 @@ static QImage* rgbDataToGrayscale(const uchar* data, const CaptureRect& captureR
+     for (int y = 1; y <= captureRect.targetHeight; ++y) {
+ 
+     //Quick fix for iOS & macOS devices. Will be handled better in the future
+-#if defined(Q_OS_IOS) || defined (Q_OS_MAC)
++//#if defined(Q_OS_IOS) || defined (Q_OS_MAC)
+         uchar* pixel = pixelInit + (y - 1) * captureRect.targetWidth;
+-#else
+-        uchar* pixel = pixelInit + (captureRect.targetHeight - y) * captureRect.targetWidth;
+-#endif
++//#else
++//        uchar* pixel = pixelInit + (captureRect.targetHeight - y) * captureRect.targetWidth;
++//#endif
+         for (int x = 0; x < captureRect.targetWidth; ++x) {
+             uchar r = data[red];
+             uchar g = data[green];

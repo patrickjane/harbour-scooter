@@ -1,0 +1,2 @@
+singleton Notify 1.0 Notify.qml
+singleton HelperFunctions 1.0 HelperFunctions.qml
