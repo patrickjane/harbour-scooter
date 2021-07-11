@@ -61,8 +61,8 @@ For unknown error situations, the app should be able to report error information
 In order to compile the project, a patch needs to be applied to the `qzxing` submodule, otherwise the app won't recognize any QR codes.
 
 ```
-s710@Starlight:~//harbour-scooter$ cd submodules/qzxing/
-s710@Starlight:~//harbour-scooter/submodules/qzxing$ git apply ../../qzxing_sfos_fix.patch
+~/harbour-scooter$ cd submodules/qzxing/
+~/harbour-scooter/submodules/qzxing$ git apply ../../qzxing_sfos_fix.patch
 
 ``` 
 
