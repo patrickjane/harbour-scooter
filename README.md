@@ -6,9 +6,9 @@ Since the app uses undocumented provider APIs, there might be errors while using
 ## Overview
 This app aims to provide support for unlocking/riding electric scooters on SailfishOS. While the app is built as multi-provider app, currently only *Bird* (https://www.bird.co) is supported.
 
-<img title="Screenshot" alt="Screenshot" width="300" src="screenshots/screenshot.png">
-<img title="Screenshot" alt="Screenshot" width="300" src="screenshots/screenshot2.png">
-<img title="Screenshot" alt="Screenshot" width="300" src="screenshots/screenshot3.png">
+<img title="Screenshot" alt="Screenshot" width="150" src="screenshots/screenshot.png">
+<img title="Screenshot" alt="Screenshot" width="150" src="screenshots/screenshot2.png">
+<img title="Screenshot" alt="Screenshot" width="150" src="screenshots/screenshot3.png">
 
 ## Features
 
@@ -54,6 +54,15 @@ The app *should*, however, always display the correct pricing information when t
 
 For unknown error situations, the app should be able to report error information which can be forwarded to the developer for analysis.
 
+# Compiling from source
+
+In order to compile the project, a patch needs to be applied to the `qzxing` submodule, otherwise the app won't recognize any QR codes.
+
+```
+s710@Starlight:~//harbour-scooter$ cd submodules/qzxing/
+s710@Starlight:~//harbour-scooter/submodules/qzxing$ git apply ../../qzxing_sfos_fix.patch
+
+``` 
 
 
 # Copyright notice
