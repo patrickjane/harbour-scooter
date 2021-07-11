@@ -5,5 +5,6 @@
         <file>graphics/scooter_marker_256.png</file>
         <file>graphics/scooter_marker_512.png</file>
         <file>icons/256x256/harbour-scooter.png</file>
+        <file>graphics/scooter.png</file>
     </qresource>
 </RCC>
