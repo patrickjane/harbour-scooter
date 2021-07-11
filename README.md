@@ -6,9 +6,11 @@ Since the app uses undocumented provider APIs, there might be errors while using
 ## Overview
 This app aims to provide support for unlocking/riding electric scooters on SailfishOS. While the app is built as multi-provider app, currently only *Bird* (https://www.bird.co) is supported.
 
-<img title="Screenshot" alt="Screenshot" width="150" src="screenshots/screenshot.png">
-<img title="Screenshot" alt="Screenshot" width="150" src="screenshots/screenshot2.png">
-<img title="Screenshot" alt="Screenshot" width="150" src="screenshots/screenshot3.png">
+<p float="left">
+<img title="Screenshot" alt="Screenshot" width="32%" src="screenshots/screenshot.png">
+<img title="Screenshot" alt="Screenshot" width="32%" src="screenshots/screenshot2.png">
+<img title="Screenshot" alt="Screenshot" width="32%" src="screenshots/screenshot3.png">
+</p>
 
 ## Features
 
