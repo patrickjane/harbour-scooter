@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import QtLocation 5.0
 import QtPositioning 5.2
 
 import MapboxMap 1.0
@@ -90,17 +89,19 @@ Page {
       function reloadScootersAtCurrentPosition() {
          if (positionSource.position.latitudeValid && positionSource.position.longitudeValid) {
             scooters.reloadScooters(positionSource.position.coordinate, 300)
-            lastReloadCoordinate = QtPositioning.coordinate(positionSource.position.coordinate.latitude, positionSource.position.coordinate.longitude)
+            lastScooterReloadCoordinate = QtPositioning.coordinate(positionSource.position.coordinate.latitude, positionSource.position.coordinate.longitude)
          }
       }
 
       function reloadAreasAtCurrentPosition() {
          if (positionSource.position.latitudeValid && positionSource.position.longitudeValid) {
-            scooters.reloadAreas(positionSource.position.coordinate, 300)
+            scooters.reloadAreas(positionSource.position.coordinate, 1000)
+            lastAreaReloadCoordinate = QtPositioning.coordinate(positionSource.position.coordinate.latitude, positionSource.position.coordinate.longitude)
          }
       }
 
-      property var lastReloadCoordinate: undefined
+      property var lastScooterReloadCoordinate: undefined
+      property var lastAreaReloadCoordinate: undefined
    }
 
    ActiveRideInfo {
@@ -146,10 +147,15 @@ Page {
             map.center = position.coordinate
          }
 
-         var reloadDistance = scooters.lastReloadCoordinate && scooters.lastReloadCoordinate.distanceTo(position.coordinate) || -1
+         var reloadDistanceScooter = scooters.lastScooterReloadCoordinate && scooters.lastScooterReloadCoordinate.distanceTo(position.coordinate) || -1
 
-         if (reloadDistance >= 50 || scooters.lastReloadCoordinate === undefined)
+         if (reloadDistanceScooter >= 100 || scooters.lastScooterReloadCoordinate === undefined)
             scooters.reloadScootersAtCurrentPosition()
+
+         var reloadDistanceAreas = scooters.lastAreaReloadCoordinate && scooters.lastAreaReloadCoordinate.distanceTo(position.coordinate) || -1
+
+         if (reloadDistanceAreas >= 300 || scooters.lastAreaReloadCoordinate === undefined)
+            scooters.reloadAreasAtCurrentPosition()
       }
 
       Component.onCompleted: {

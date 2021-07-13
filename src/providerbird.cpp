@@ -490,12 +490,15 @@ namespace scooter
          }
 
          auto doc = QJsonDocument::fromJson(body);
-         auto parsed = (!doc.isNull() && doc.isArray()) ? doc.array() : QJsonArray();
+         QJsonArray parsed = (!doc.isNull() && doc.isArray()) ? doc.array() : QJsonArray();
 
          for (const QJsonValue& jsonArea : parsed)
          {
             if (!jsonArea.isObject())
+            {
+               qDebug() << "Invalid/unexpected data for no-parking zone #0";
                continue;
+            }
 
             QJsonObject obj = jsonArea.toObject();
 

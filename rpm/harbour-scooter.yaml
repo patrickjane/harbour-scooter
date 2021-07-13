@@ -1,7 +1,7 @@
 Name: harbour-scooter
 Summary: App for accessing electric scooters
 Version: 1.0
-Release: 1
+Release: 2
 # The contents of the Group field should be one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group: Qt/Qt
@@ -30,10 +30,8 @@ PkgConfigBR:
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
-  - qmapboxgl
-  - qt5-plugin-geoservices-osm
+  - mapboxgl-qml
   - qt5-qtlocation >= 5.2.0
-  - qt5-qtdeclarative-import-location >= 5.2.0
   - qt5-qtdeclarative-import-positioning >= 5.2.0
 
 # All installed files

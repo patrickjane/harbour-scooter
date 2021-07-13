@@ -10,17 +10,15 @@ Name:       harbour-scooter
 
 Summary:    App for accessing electric scooters
 Version:    1.0
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    MIT
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-scooter.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires:   qmapboxgl
-Requires:   qt5-plugin-geoservices-osm
+Requires:   mapboxgl-qml
 Requires:   qt5-qtlocation >= 5.2.0
-Requires:   qt5-qtdeclarative-import-location >= 5.2.0
 Requires:   qt5-qtdeclarative-import-positioning >= 5.2.0
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
