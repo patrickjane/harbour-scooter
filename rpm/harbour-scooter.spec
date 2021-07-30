@@ -9,8 +9,8 @@ Name:       harbour-scooter
 # << macros
 
 Summary:    App for accessing electric scooters
-Version:    1.0
-Release:    2
+Version:    1.1
+Release:    1
 Group:      Qt/Qt
 License:    MIT
 URL:        http://example.org/
