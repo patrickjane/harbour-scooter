@@ -40,7 +40,7 @@ Currently supported:
 - *Bird* (https://www.bird.co)
 
 
-Other scooter providers have been contacted asking for support/documentation of their APIs. The app is built with mulit-provider support in mind, as such, it will be an easy task to add other providers in the future, once the API is known / documentation is available.
+Other scooter providers have been contacted asking for support/documentation of their APIs. The app is built with multi-provider support in mind, as such, it will be an easy task to add other providers in the future, once the API is known / documentation is available.
 
 ## Known issues / limitations
 
